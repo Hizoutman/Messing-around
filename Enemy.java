@@ -30,6 +30,9 @@ public class Enemy {
 
     public int attack(Character c) {
         int damage = getAttack() - c.getDefense();
+        if(damage <= 0) {
+            return 0;
+        }
         return damage;
     }
 }
