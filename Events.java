@@ -23,5 +23,6 @@ public class Events {
 
     public Event generateEvent() {
         //Event generator
+        
     }
 }
