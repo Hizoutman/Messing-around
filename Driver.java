@@ -25,6 +25,9 @@ public class Driver{
   if(choice==2)player.Character(name,"Mage",80,4,6,0);;
   if(choice==3)player.Character(name,"Thief",76,7,3,0);;
   if(choice==4)player.Character(name,"Priest",94,2,8,0);;
+  System.out.println("Now its time to start your adventure!");
+  Gameboard game = new Gameboard();
+  
   input.close()
   }
 
