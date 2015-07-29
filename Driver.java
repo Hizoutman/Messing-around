@@ -15,7 +15,7 @@ public class Driver{
   "\n4)Priest" Str:2 Def:8);
     while(true){
       choice = input.nextInt();
-      if(job<1 || job>4){
+      if(choice<1 || choice>4){
         System.out.println("invalid, please enter in the number of the corresponding class.");
       }
       else break;
