@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class Driver{
   
   private String name;
-  private String job;
   private int choice;
   
   public static void main(String[] args){
@@ -15,18 +14,18 @@ public class Driver{
   "\n4)Priest HP:94 Str:2 Def:8");
     while(true){
       choice = input.nextInt();
-      if(choice<1 || choice>4){
+      if(choice<1 || choice>6){
         System.out.println("invalid, please enter in the number of the corresponding class.");
       }
       else break;
     }
   Character player = new Character();
-  if(choice==1)player.Character(name,100,9,1);
-  if(choice==2)player.Character(name,80,4,6);;
-  if(choice==3)player.Character(name,76,7,3);;
-  if(choice==4)player.Character(name,94,2,8);;
+  if(choice==1)player.WarriorClass(name,100,9,1);
+  if(choice==2)player.MageClass(name,80,4,6);;
+  if(choice==3)player.ThiefClass(name,76,7,3);;
+  if(choice==4)player.PriestClass(name,94,2,8);;
+  //add in other classes according to choices
   System.out.println("Now its time to start your adventure!");
-  Gameboard game = new Gameboard();
   
   input.close()
   }
