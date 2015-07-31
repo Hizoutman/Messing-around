@@ -21,10 +21,10 @@ public class Driver{
       else break;
     }
   Character player = new Character();
-  if(choice==1)player.Character(name,"Warrior",100,9,1);
-  if(choice==2)player.Character(name,"Mage",80,4,6);;
-  if(choice==3)player.Character(name,"Thief",76,7,3);;
-  if(choice==4)player.Character(name,"Priest",94,2,8);;
+  if(choice==1)player.Character(name,100,9,1);
+  if(choice==2)player.Character(name,80,4,6);;
+  if(choice==3)player.Character(name,76,7,3);;
+  if(choice==4)player.Character(name,94,2,8);;
   System.out.println("Now its time to start your adventure!");
   Gameboard game = new Gameboard();
   
