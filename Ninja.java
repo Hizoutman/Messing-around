@@ -1,3 +1,4 @@
+
 public class Ninja extends Character {
 
     private String special;

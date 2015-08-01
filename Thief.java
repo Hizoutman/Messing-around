@@ -1,3 +1,4 @@
+
 public class Thief extends Character{
   private String special;
   
@@ -8,7 +9,7 @@ public class Thief extends Character{
     public String getSpecial(){
       return this.special;
     }
-    public void Special(Character a){
+    public void special(Character a){
       //crit attack/low hit rate
       System.out.println("Thief used special move!");
       attack(a);

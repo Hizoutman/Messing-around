@@ -1,3 +1,6 @@
+package misc;
+import Enemy;
+
 public class Events {
     private String description;
     private Enemy monster;
@@ -21,8 +24,10 @@ public class Events {
         return this.monster;
     }
 
+    /*
     public Event generateEvent() {
         //Event generator
         
     }
+    */
 }

@@ -1,3 +1,6 @@
+package misc;
+import Character;
+
 public class Gameboard{
 
     private Events[] eventBoard = new Events[100];

@@ -31,3 +31,7 @@ Main Classes
 6. Items
 7. Multiplayer group battles (instead of one character at a time)
 #Add ideas here
+
+added new stuff
+
+

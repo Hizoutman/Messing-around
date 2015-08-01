@@ -1,3 +1,5 @@
+
+
 public class Enemy {
 
     private int health;
@@ -35,8 +37,10 @@ public class Enemy {
         }
         return damage;
     }
+    /*
     public Enemy generateMonster() {
         //generates some type of Monster
     }
+    */
 }
 

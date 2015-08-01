@@ -1,3 +1,4 @@
+package misc;
 public class Dice { //Dice class, rolls a dice etc.//
 
     public Dice() {}
