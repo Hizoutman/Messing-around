@@ -1,10 +1,10 @@
 import java.util.Scanner;
 public class Driver{
-  
-  private String name;
-  private int choice;
-  
+
   public static void main(String[] args){
+	
+	String name;
+	int choice;
   Scanner input = new Scanner(System.in);
   System.out.println("Welcome, please enter in a name");
     name = input.next();
@@ -19,11 +19,19 @@ public class Driver{
       }
       else break;
     }
-  Character player = new Character();
-  if(choice==1)player.WarriorClass(name,100,9,1);
-  if(choice==2)player.MageClass(name,80,4,6);;
-  if(choice==3)player.ThiefClass(name,76,7,3);;
-  if(choice==4)player.PriestClass(name,94,2,8);;
+  Character player;
+  if(choice==1){
+	  player = new Warrior(name,100,9,1);
+  }
+  if(choice==2){
+	  player = new Mage(name,80,4,6);
+  }
+  if(choice==3){
+	  player = new Thief(name,76,7,3);
+  }
+  if(choice==4){
+	  player = new Priest(name,94,2,8);
+  }
   //add in other classes according to choices
   System.out.println("Now its time to start your adventure!");
   
