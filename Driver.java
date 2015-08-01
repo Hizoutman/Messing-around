@@ -1,54 +1,60 @@
+import CharacterClasses.*;
 import CharacterClasses.Character;
 import java.util.Scanner;
 
-public class Battle {
+//import characterClass.*;
+public class Driver{
 
-	private boolean fight = true;
-	private Scanner turn = new Scanner(System.in);
+  public static void main(String[] args){
+  	Scanner input = new Scanner(System.in);
+  	System.out.println("Welcome, please enter in a name");
+  	String name = input.next();
+  	System.out.println("Select a character class from the list:\n1) Warrior HP:100 Atk:9 Def:1 " +
+  	"\n2) Mage HP:80 Atk:4 Def:6"+
+  	"\n3) Thief HP:76 Atk:7 Def:3"+
+	"\n4) Priest HP:94 Atk:2 Def:8"+
+	"\n5) Magical Girl HP: 20 Atk: 6 Def: 4"+
+  	"\n6) Ninja HP: 88 Atk: 5 Def: 5"+
+  	"\n7) Dragon Tamer HP:80 Atk: 3 Def: 7");
+  	int choice = input.nextInt();
+    Character player = new Character();
+  	while(true) {
+      	if(choice < 1 || choice > 7) {
+        	System.out.println("invalid, please enter in the number of the corresponding class.");
+        	choice = input.nextInt();
+      	}
+      	else {
+          	break;
+      	}
+  	}
+  	if(choice==1) {
+     		player = new Warrior(name,100,9,1);
+  	}
+  	if(choice==2) {
+     		player = new Mage(name,80,4,6);
+  	}
+  	if(choice==3) {
+     		player = new Thief(name,76,7,3);
+  	}
+  	if(choice==4) {
+     		player = new Priest(name,94,2,8);
+  	}
+  	if(choice==5) {
+     		player = new MagicalGirl(name,20,6,4);
+  	}
+  	if(choice==6) {
+     		player = new Ninja(name,88,5,5);
+  	}
+  	if(choice==7) {
+     		player = new DragonTamer(name,80,3,7);
+  	}
+  //add in other classes according to choices
+  System.out.println("Now its time to start your Battle!");
 
-	public Battle(){};
-
-	public Battle(Character a, Character b) {
-		int round = 1;
-		while(fight){
-			System.out.println("Round " + round + " has begun!");
-			System.out.println("What do you want to do?\n1)attack\n2)Defend\n3)Special");
-			command(turn.nextInt(),a,b);
-
-			if(b.died == false){
-				b.attack(a);
-				System.out.println("Your Health: " + a.getHealth());
-				System.out.println("Enemy Health: " + b.getHealth());
-			}
-			System.out.println(a.getHealth());
-			if(a.died){
-				System.out.println("Game Over");
-				System.exit(0);
-			}
-			if(b.died){
-				System.out.println("You defeated the Enemy!");
-				fight = false;
-			}
-			round++;
-		}
-	}
-
-	private void command(int x, Character a, Character b){
-		if(x==1){
-			a.attack(b);
-		}
-		if(x==2){
-			System.out.println(a.getName() + " defends!");
-		}
-		if(x==3){
-			System.out.println(a.getName() + " uses " + a.getSpecial());
-			a.special(b);
-		}
-	}
-
-	/*
-	private String showHp(Character a){
-		System.out.println("");
-	}
-	*/
+  //BATTLE PHASE BEGINS//
+  //add in other classes according to choices
+  //need 'events' for stat/hp changes as well as detailed encounters
+  AdvSim sim = new AdvSim(player);
+  input.close();//ensure that close for scanner is at the end ALWAYS. Might go to a java.util.NoSuchElement
+  }
 }
