@@ -27,6 +27,7 @@ public class Battle {
 			}
 			if(b.died){
 				System.out.println("You defeated the Enemy!");
+				System.out.println("Your Health: " + a.getHealth());
 				fight = false;
 			}
 			round++;
