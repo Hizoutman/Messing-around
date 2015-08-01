@@ -1,7 +1,7 @@
 public class Thief extends Character{
   private String special;
   
-    public Theif(String name, int health,int attack,int defense){
+    public Thief(String name, int health,int attack,int defense){
     super(name,health,attack,defense);
     this.special = "Bash";
     }
