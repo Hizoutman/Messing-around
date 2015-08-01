@@ -20,7 +20,6 @@ public class Battle {
 				System.out.println("Your Health: " + a.getHealth());
 				System.out.println("Enemy Health: " + b.getHealth());
 			}
-			System.out.println(a.getHealth());
 			if(a.died){
 				System.out.println("Game Over");
 				System.exit(0);
