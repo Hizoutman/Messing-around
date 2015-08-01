@@ -7,7 +7,6 @@ public class Character {
 
     public Character(String name, int health,int attack,int defense) {
         this.name = name; //This will need an input scanner later//
-        this.type = type;
         this.health = health;
         this.attack = attack;
         this.defense = defense;
@@ -15,10 +14,6 @@ public class Character {
 
     public String getName() {
         return this.name;
-    }
-
-    public String getType() {
-        return this.type;
     }
 
     public int getAttack() {
@@ -40,13 +35,18 @@ public class Character {
     public void setDefense(int d) {
         this.defense = d;
     }
-/*
-    public int attack(Enemy e) {
-        int damage = this.getAttack() - e.getDefense();
-        if(damage <= 0) {
-            return 0;
+
+    public void attack(Chracter enemy) {
+        dmg = this.getAttack - enemy.getDefense();
+        if(dmg > 0) {
+            enemy.setHealth(enemy.getHealth() - dmg));
+            int res = enemy.getHealth();
+            if(res <= 0) {
+                enemy.die();
+            }
         }
-        return damage;
     }
-*/
+    public void die() {
+        System.out.println(this.getName() + "Died");
+    }
 }
