@@ -5,14 +5,16 @@ public class Battle {
 
 	private boolean fight = true;
 	private Scanner turn = new Scanner(System.in);
-	
+
 	public Battle(){};
-	
-	public Battle(Character a, Character b){
+
+	public Battle(Character a, Character b) {
+		int round = 1;
 		while(fight){
+			System.out.println(round + " has begun!");
 			System.out.println("What do you want to do?\n1)attack\n2)Defend\n3)Special");
 			command(turn.nextInt(),a,b);
-			
+
 			if(b.died == false){
 				b.attack(a);
 				System.out.println(b.getHealth());
@@ -25,13 +27,14 @@ public class Battle {
 			if(b.died){
 				System.out.println("You defeated the Enemy!");
 				fight = false;
+			round++;
 			}
 		}
 	}
-	
+
 	private void command(int x, Character a, Character b){
 		if(x==1){
-			a.attack(b);	
+			a.attack(b);
 		}
 		if(x==2){
 			System.out.println(a.getName() + " defends!");
@@ -41,7 +44,7 @@ public class Battle {
 			a.special(b);
 		}
 	}
-	
+
 	/*
 	private String showHp(Character a){
 		System.out.println("");
