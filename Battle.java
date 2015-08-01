@@ -17,7 +17,8 @@ public class Battle {
 
 			if(b.died == false){
 				b.attack(a);
-				System.out.println(b.getHealth());
+				System.out.println("Your Health: " + a.getHealth());
+				System.out.println("Enemy Health: " + b.getHealth());
 			}
 			System.out.println(a.getHealth());
 			if(a.died){
