@@ -1,7 +1,7 @@
-public class WarriorClass extends Character{
+public class Warrior extends Character{
   private String special;
   
-    public WarriorClass(String name, int health,int attack,int defense){
+    public Warrior(String name, int health,int attack,int defense){
     super(name,health,attack,defense);
     this.special = "Bash";
     }
