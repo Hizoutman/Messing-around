@@ -10,6 +10,7 @@ public class WarriorClass extends Character{
     }
     public void Special(Character a){
       //crit attack/low hit rate
+      System.out.println("Warrior used special move!");
       attack(a);
     }
 }
