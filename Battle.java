@@ -11,7 +11,7 @@ public class Battle {
 	public Battle(Character a, Character b) {
 		int round = 1;
 		while(fight){
-			System.out.println(round + " has begun!");
+			System.out.println("Round " + round + " has begun!");
 			System.out.println("What do you want to do?\n1)attack\n2)Defend\n3)Special");
 			command(turn.nextInt(),a,b);
 
