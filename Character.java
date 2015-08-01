@@ -28,6 +28,10 @@ public class Character {
         this.health = h;
     }
 
+    public int getHealth() {
+        return this.health;
+    }
+
     public void setAttack(int a) {
         this.attack = a;
     }
@@ -36,10 +40,10 @@ public class Character {
         this.defense = d;
     }
 
-    public void attack(Chracter enemy) {
-        dmg = this.getAttack - enemy.getDefense();
+    public void attack(Character enemy) {
+        int dmg = this.getAttack() - enemy.getDefense();
         if(dmg > 0) {
-            enemy.setHealth(enemy.getHealth() - dmg));
+            enemy.setHealth(enemy.getHealth() - dmg);
             int res = enemy.getHealth();
             if(res <= 0) {
                 enemy.die();
@@ -47,6 +51,6 @@ public class Character {
         }
     }
     public void die() {
-        System.out.println(this.getName() + "Died");
+        System.out.println(this.getAttack() + "Died");
     }
 }
