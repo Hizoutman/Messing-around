@@ -1,4 +1,4 @@
-
+import CharacterClasses.Character;
 
 public class Enemy {
 

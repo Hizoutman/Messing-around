@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class Warrior extends Character{
   private String special;
   

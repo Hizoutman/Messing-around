@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class Thief extends Character{
   private String special;
   

@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class MagicalGirl extends Character {
 
         private String special;

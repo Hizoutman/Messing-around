@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class Priest extends Character {
 	private String special;
 	  

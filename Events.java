@@ -1,5 +1,5 @@
-//package misc;
-import Enemy;
+
+//import Enemy;
 
 public class Events {
     private String description;

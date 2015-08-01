@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class Character {
 
     private String name; //Add input scanner later//

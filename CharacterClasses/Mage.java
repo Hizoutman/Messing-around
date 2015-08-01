@@ -1,4 +1,4 @@
-
+package CharacterClasses;
 public class Mage extends Character{
   private String special;
   

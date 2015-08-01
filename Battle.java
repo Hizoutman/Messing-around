@@ -1,4 +1,4 @@
-
+import CharacterClasses.Character;
 import java.util.Scanner;
 
 public class Battle {
@@ -6,10 +6,13 @@ public class Battle {
 	private boolean fight = true;
 	private Scanner turn = new Scanner(System.in);
 	
+	public Battle(){};
+	
 	public Battle(Character a, Character b){
 		while(fight){
 			System.out.println("What do you want to do?\n1)attack\n2)Defend\n3)Special");
 			command(turn.nextInt(),a,b);
+			
 			if(b.died == false){
 				b.attack(a);
 				System.out.println(b.getHealth());

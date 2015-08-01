@@ -1,4 +1,5 @@
-
+import CharacterClasses.*;
+import CharacterClasses.Character;
 import java.util.Scanner;
 
 //import characterClass.*;
@@ -49,13 +50,12 @@ public class Driver{
     
     //add in other classes according to choices
     System.out.println("Now its time to start your adventure!");
-    input.close();
     //need 'events' for stat/hp changes as well as detailed encounters
-    while(true){
+    
     Character enemy = new Warrior("Bob",100,1,1);// need to make an enemy generator
   
    	Battle encounter = new Battle(player,enemy);// write better
-    }
+   	input.close();//ensure that close for scanner is at the end ALWAYS. Might go to a java.util.NoSuchElement
   }
 
 }

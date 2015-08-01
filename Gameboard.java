@@ -1,5 +1,5 @@
-package misc;
-import Character;
+
+import CharacterClasses.Character;
 
 public class Gameboard{
 
