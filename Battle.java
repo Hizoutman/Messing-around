@@ -27,8 +27,8 @@ public class Battle {
 			if(b.died){
 				System.out.println("You defeated the Enemy!");
 				fight = false;
-			round++;
 			}
+			round++;
 		}
 	}
 
