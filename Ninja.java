@@ -17,3 +17,4 @@ public class Ninja extends Character {
         this.attack(enemy);
     }
 }
+
