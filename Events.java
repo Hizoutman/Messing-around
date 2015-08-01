@@ -1,4 +1,4 @@
-package misc;
+//package misc;
 import Enemy;
 
 public class Events {
