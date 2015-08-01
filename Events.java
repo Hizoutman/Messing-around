@@ -1,9 +1,11 @@
-
+import CharacterClasses.Character;
 //import Enemy;
+import CharacterClasses.EnemyGen;
 
 public class Events {
     private String description;
-    private Enemy monster;
+    private Character monster;
+     int battleCounter = 0;
 
     public Events(){}
 
@@ -11,16 +13,26 @@ public class Events {
         this.description = description;
     }
 
-    public Events(String description ,Enemy monster) {
-        this.description = description;
-        this.monster = monster;
+    public Events(String description,Character player) {
+    	this.description = description;
+    	if(description.equals("Battle")){
+    		EnemyGen gen = new EnemyGen();
+        	this.monster = gen.createRandEnemy();
+			battleCounter++;
+			System.out.println(monster.getName() + " appears!. No. " + battleCounter);
+	   		Battle encounter = new Battle(player,monster);// write better
+    	}
+    	if(description.equals("HP")){
+    		System.out.println(player.getName() +" found an apple!\n" +player.getName() +" ate the apple.\nRecovered 50 hp.");
+    		player.setHealth(player.getHealth() + 50);
+    	}
     }
 
     public void getDescription() {
         System.out.println(this.description);
     }
 
-    public Enemy getEnemy() {
+    public Character getEnemy() {
         return this.monster;
     }
 

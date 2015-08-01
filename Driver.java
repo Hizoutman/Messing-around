@@ -52,9 +52,8 @@ public class Driver{
     System.out.println("Now its time to start your adventure!");
     //need 'events' for stat/hp changes as well as detailed encounters
     
-    Character enemy = new Warrior("Bob",100,1,1);// need to make an enemy generator
-  
-   	Battle encounter = new Battle(player,enemy);// write better
+    AdvSim sim = new AdvSim(player);
+    
    	input.close();//ensure that close for scanner is at the end ALWAYS. Might go to a java.util.NoSuchElement
   }
 
