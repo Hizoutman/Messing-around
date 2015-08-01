@@ -52,7 +52,7 @@ public class Driver{
 
   //BATTLE PHASE BEGINS//
   //add in other classes according to choices
-  input.close();
+  
   //need 'events' for stat/hp changes as well as detailed encounters
   AdvSim sim = new AdvSim(player);
   input.close();//ensure that close for scanner is at the end ALWAYS. Might go to a java.util.NoSuchElement
