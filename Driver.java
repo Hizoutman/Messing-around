@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-import characterClass.*;
+//import characterClass.*;
 public class Driver{
 
   public static void main(String[] args){
@@ -15,6 +15,7 @@ public class Driver{
     		"\n2)Mage HP:80 Str:4 Def:6"+
     		"\n3)Thief HP:76 Str:7 Def:3"+
     		"\n4)Priest HP:94 Str:2 Def:8");
+//need to add the other classes
     while(true){
       choice = input.nextInt();
       if(choice<1 || choice>6){
@@ -35,6 +36,7 @@ public class Driver{
     if(choice==4){
     	player = new Priest(name,94,2,8);
     }
+//change stats of other classes
     if(choice==5){
     	player = new MagicalGirl(name,94,2,8);
     }
@@ -48,11 +50,11 @@ public class Driver{
     //add in other classes according to choices
     System.out.println("Now its time to start your adventure!");
     input.close();
-    
+    //need 'events' for stat/hp changes as well as detailed encounters
     while(true){
-    Character enemy = new Warrior("Bob",100,1,1);
+    Character enemy = new Warrior("Bob",100,1,1);// need to make an enemy generator
   
-   	Battle encounter = new Battle(player,enemy);
+   	Battle encounter = new Battle(player,enemy);// write better
     }
   }
 
