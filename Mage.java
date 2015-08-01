@@ -1,7 +1,7 @@
-public class MageClass extends Character{
+public class Mage extends Character{
   private String special;
   
-    public WarriorClass(String name, int health,int attack,int defense){
+    public Mage(String name, int health,int attack,int defense){
     super(name,health,attack,defense);
     this.special = "Incantation";
     }
