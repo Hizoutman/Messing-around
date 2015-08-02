@@ -10,8 +10,14 @@ public class AdvSim {
 			if(num.roll()%2==0){
 				Events fight = new Events("Battle",player);
 			}
-			if(num.roll()%2==1){
+			if(num.roll()==1){
 				Events fight = new Events("HP",player);
+			}
+			if(num.roll()==3){
+				Events att = new Events("AttChange",player);
+			}
+			if(num.roll()==5){
+				Events att = new Events("DefChange",player);	
 			}
 			
 		}
