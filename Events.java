@@ -5,7 +5,7 @@ import CharacterClasses.EnemyGen;
 public class Events {
     private String description;
     private Character monster;
-     int battleCounter = 0;
+    static int battleCounter = 0;
 
     public Events(){}
 
