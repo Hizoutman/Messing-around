@@ -12,4 +12,12 @@ public class Item {
     public String getType() {
         return this.type;
     }
+    
+    public int getAmt() {
+        return this.amt;
+    }
+    
+    public String getName() {
+        return this.name;
+    }
 }
