@@ -52,10 +52,12 @@ public class Character {
 
     public void setbDefense(int d) {
         this.basedefense = d;
+        this.defense = d;
     }
 
     public void setbAttack(int a) {
         this.baseattack = a;
+        this.attack = a;
     }
 
     public void setHealth(int h) {

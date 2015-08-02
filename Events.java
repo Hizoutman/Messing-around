@@ -27,10 +27,12 @@ public class Events {
     		player.setHealth(player.getHealth() + 50);
     	}
     	if(description.equals("DefChange")){
-    		
+    		System.out.println(player.getName() +" found some Def. steriods!\n" +player.getName() +" consumed the steriods\nDefense rose by 5.");
+    		player.setbDefense(player.getbDefense() + 5);
     	}
     	if(description.equals("AttChange")){
-    		
+    		System.out.println(player.getName() +" found some Att. steriods!\n" +player.getName() +" consumed the steriods\nAttack rose by 5.");
+    		player.setbAttack(player.getbAttack() + 5);
     	}
     }
 
