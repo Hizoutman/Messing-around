@@ -81,7 +81,7 @@ public class Character {
     public void special(Character a){}
 
     public void attack(Character enemy) {
-        int dmg = this.getAttack() - enemy.getDefense();
+        int dmg = (int) (this.getAttack() - Math.ceil(enemy.getDefense()/2));
         System.out.println(this.name + " damages " + enemy.getName() + " for " + dmg);
         if(dmg > 0) {
             enemy.setHealth(enemy.getHealth() - dmg);
@@ -90,6 +90,11 @@ public class Character {
                 enemy.die();
             }
         }
+    }
+    
+    public void reset(){
+    	this.attack = baseattack;
+    	this.defense = basedefense;
     }
 
     public void die() {

@@ -26,6 +26,12 @@ public class Events {
     		System.out.println(player.getName() +" found an apple!\n" +player.getName() +" ate the apple.\nRecovered 50 hp.");
     		player.setHealth(player.getHealth() + 50);
     	}
+    	if(description.equals("DefChange")){
+    		
+    	}
+    	if(description.equals("AttChange")){
+    		
+    	}
     }
 
     public void getDescription() {

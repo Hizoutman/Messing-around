@@ -5,6 +5,7 @@ public class Battle {
 
 	private boolean fight = true;
 	private Scanner turn = new Scanner(System.in);
+	
 
 	public Battle(){};
 
@@ -15,7 +16,7 @@ public class Battle {
 			System.out.println("What do you want to do?\n1)attack\n2)Defend\n3)Special");
 			command(turn.nextInt(),a,b);
 
-			if(b.died == false){
+			if(b.died == false){// enemy turn
 				b.attack(a);
 				System.out.println("Your Health: " + a.getHealth());
 				System.out.println("Enemy Health: " + b.getHealth());
@@ -30,6 +31,7 @@ public class Battle {
 				fight = false;
 			}
 			round++;
+			a.reset();
 		}
 	}
 
@@ -39,6 +41,7 @@ public class Battle {
 		}
 		if(x==2){
 			System.out.println(a.getName() + " defends!");
+			a.setDefense(a.getDefense()*2);
 		}
 		if(x==3){
 			System.out.println(a.getName() + " uses " + a.getSpecial());
