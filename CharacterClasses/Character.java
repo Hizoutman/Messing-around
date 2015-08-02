@@ -5,8 +5,11 @@ public class Character {
     private int health;
     private int attack;
     private int defense;
+    private int basehealth;
+    private int baseattack;
+    private int basedefense;
     public boolean died = false;
-    
+
     public Character(){};
 
     public Character(String name, int health,int attack,int defense) {
@@ -14,6 +17,9 @@ public class Character {
         this.health = health;
         this.attack = attack;
         this.defense = defense;
+        this.basehealth = health;
+        this.baseattack = attack;
+        this.basedefense = defense;
     }
 
     public String getName() {
@@ -26,6 +32,30 @@ public class Character {
 
     public int getDefense() {
         return this.defense;
+    }
+
+    public int getbHealth() {
+        return this.basehealth;
+    }
+
+    public int getbAttack() {
+        return this.baseattack;
+    }
+
+    public int getbDefense() {
+        return this.basedefense;
+    }
+
+    public void setbHealth(int h) {
+        this.basehealth = h;
+    }
+
+    public void setbDefense(int d) {
+        this.basedefense = d;
+    }
+
+    public void setbAttack(int a) {
+        this.baseattack = a;
     }
 
     public void setHealth(int h) {
@@ -43,11 +73,11 @@ public class Character {
     public void setDefense(int d) {
         this.defense = d;
     }
-    
+
     public String getSpecial(){
     	return "";
     }
-    
+
     public void special(Character a){}
 
     public void attack(Character enemy) {
@@ -61,7 +91,7 @@ public class Character {
             }
         }
     }
-    
+
     public void die() {
     	died = true;
         System.out.println(this.getName() + " has Died");
