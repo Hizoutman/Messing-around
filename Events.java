@@ -11,6 +11,7 @@ public class Events {
 
     public Events(String description) {
         this.description = description;
+        
     }
 
     public Events(String description,Character player) {
