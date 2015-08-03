@@ -131,18 +131,20 @@ public class Character {
             this.itemList[itemPos] = null;
         }
     }
-    
+
     public void getItem(Item item) {
         for(int x = 0; x < this.itemList.length; x++) {
             if(this.numItems == 5) {
                 System.out.println("Bag cannot hold more items! Would you like to replace it with any of the items in your current bag? y/n");
                 Scanner one = new Scanner(System.in);
-                if(one.nextLine() == "y") {
+                String ans = one.nextLine();
+                if(ans == "y") {
                     System.out.println("1. " + this.itemList[0].getName() +
                         "\n 2. " + this.itemList[1].getName() + "\n 3. " +
                          this.itemList[2].getName() + "\n 4. " +
                          this.itemList[3].getName() + "\n 5. " +
                          this.itemList[4].getName());
+                    System.out.print("\nPick the slot you want to replace: ");
                     Scanner two = new Scanner(System.in);
                     int replace = two.nextInt();
                     while(replace < 1 || replace > 5) {
