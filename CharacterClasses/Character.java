@@ -1,4 +1,6 @@
 package CharacterClasses;
+import java.util.Scanner;
+//NOTE, YOU HAVE TO COMPILE ALL FILES FOR THIS TO COMPILE//
 public class Character {
 
     private String name; //Add input scanner later//
@@ -8,7 +10,9 @@ public class Character {
     private int basehealth;
     private int baseattack;
     private int basedefense;
+    private Item[] itemList;
     public boolean died = false;
+    private int numItems;
 
     public Character(){};
 
@@ -20,6 +24,8 @@ public class Character {
         this.basehealth = health;
         this.baseattack = attack;
         this.basedefense = defense;
+        this.itemList = new Item[5];
+        this.numItems = 0;
     }
 
     public String getName() {
@@ -93,7 +99,7 @@ public class Character {
             }
         }
     }
-    
+
     public void reset(){
     	this.attack = baseattack;
     	this.defense = basedefense;
@@ -103,4 +109,52 @@ public class Character {
     	died = true;
         System.out.println(this.getName() + " has Died");
     }
+
+    public void useItem(Item item) {
+        if(item.getType() == "Heal") {
+            this.health += item.getAmt();
+        }
+        else if(item.getType() == "Hurt") {
+            this.health -= item.getAmt();
+            if(this.health <= 0) {
+                this.die();
+            }
+        }
+        else if(item.getType() == "Atk") {
+            this.attack += item.getAmt();
+        }
+        else { //Def//
+            this.defense += item.getAmt();
+        }
+    }
+
+    public void getItem(Item item) {
+        for(int x = 0; x < this.itemList.length; x++) {
+            if(this.numItems == 5) {
+                System.out.println("Bag cannot hold more items! Would you like to replace it with any of the items in your current bag? y/n");
+                Scanner one = new Scanner(System.in);
+                if(one.nextLine() == "y") {
+                    System.out.println("1. " + this.itemList[0].getName() +
+                        "\n 2. " + this.itemList[1].getName() + "\n 3. " +
+                         this.itemList[2].getName() + "\n 4. " +
+                         this.itemList[3].getName() + "\n 5. " +
+                         this.itemList[4].getName());
+                    Scanner two = new Scanner(System.in);
+                    while(two.nextInt() < 1 || two.nextInt() > 5) {
+                        System.out.println("Not a valid Number! Please select a number from 1 to 5");
+                        two.nextInt();
+                    }
+                }
+                break;
+            }
+            if(this.itemList[x] == null) {
+                this.itemList[x] = item;
+                this.numItems++;
+                System.out.println(this.getName() + " picked up a/an " +
+                    item.getName());
+                break;
+            }
+        }
+    }
 }
+
