@@ -1,4 +1,4 @@
-package CharacterClasses;
+package Items;
 public class Item {
     private String type; //heal,hurt,atk,def
     private int amt;

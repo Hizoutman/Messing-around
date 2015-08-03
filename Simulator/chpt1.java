@@ -1,6 +1,8 @@
+package Simulator;
 
 
 import CharacterClasses.Character;
+import Mechanics.Battle;
 
 public class chpt1 {
 	

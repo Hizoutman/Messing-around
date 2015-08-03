@@ -1,5 +1,8 @@
+package Simulator;
 import CharacterClasses.Character;
-import CharacterClasses.EnemyGen;
+import Mechanics.Dice;
+import Mechanics.EnemyGen;
+
 import java.util.Scanner;
 
 public class AdvSim {

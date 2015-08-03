@@ -1,5 +1,7 @@
 package CharacterClasses;
 import java.util.Scanner;
+
+import Items.Item;
 //NOTE, YOU HAVE TO COMPILE ALL FILES FOR THIS TO COMPILE//
 public class Character {
 
@@ -12,7 +14,6 @@ public class Character {
     private int basedefense;
     private Item[] itemList;
     public boolean died = false;
-    private int numItems;
 
     public Character(){};
 
@@ -24,8 +25,7 @@ public class Character {
         this.basehealth = health;
         this.baseattack = attack;
         this.basedefense = defense;
-        this.itemList = new Item[5];
-        this.numItems = 0;
+        itemList = new Item[5];
     }
 
     public String getName() {
@@ -132,37 +132,46 @@ public class Character {
         }
     }
 
-    public void getItem(Item item) {
-        for(int x = 0; x < this.itemList.length; x++) {
-            if(this.numItems == 5) {
-                System.out.println("Bag cannot hold more items! Would you like to replace it with any of the items in your current bag? y/n");
-                Scanner one = new Scanner(System.in);
-                String ans = one.nextLine();
-                if(ans == "y") {
-                    System.out.println("1. " + this.itemList[0].getName() +
+    public void getItem(Item item) {//hard code in no?
+       int avalSlot = isFull();
+       if(avalSlot < 0) {
+          System.out.println("Bag cannot hold more items! Would you like to replace it with any of the items in your current bag? y/n");
+          Scanner one = new Scanner(System.in);
+          String ans = one.nextLine();
+          if(ans.equals("y")) {
+             System.out.println("1. " + this.itemList[0].getName() +
                         "\n 2. " + this.itemList[1].getName() + "\n 3. " +
                          this.itemList[2].getName() + "\n 4. " +
                          this.itemList[3].getName() + "\n 5. " +
                          this.itemList[4].getName());
-                    System.out.print("\nPick the slot you want to replace: ");
-                    Scanner two = new Scanner(System.in);
+             System.out.print("\nPick the slot you want to replace: ");
+             Scanner two = new Scanner(System.in);
                     int replace = two.nextInt();
                     while(replace < 1 || replace > 5) {
                         System.out.println("Not a valid Number! Please select a number from 1 to 5");
                         replace = two.nextInt();
                     }
-                    this.itemList[replace] = item;
-                }
-                break;
-            }
-            if(this.itemList[x] == null) {
-                this.itemList[x] = item;
-                this.numItems++;
-                System.out.println(this.getName() + " picked up a/an " +
-                    item.getName());
-                break;
-            }
-        }
+                    this.itemList[replace - 1] = item;
+         }
+      }
+       else{
+    	   itemList[avalSlot] = item;
+    	   
+       }
+       System.out.println(this.getName() + " picked up a/an " +
+               item.getName());
     }
+
+	private int isFull() {
+		//to check if garbage is full
+		//for(Item anItem : itemList){
+		for(int i = 0; i<itemList.length;i++){
+			if(itemList[i] == null){
+			// or if it is empty
+				return i;
+			}
+		}
+		return -1;
+	}
 }
 

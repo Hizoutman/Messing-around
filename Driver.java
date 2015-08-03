@@ -1,5 +1,7 @@
 import CharacterClasses.*;
 import CharacterClasses.Character;
+import Simulator.AdvSim;
+
 import java.util.Scanner;
 
 //import characterClass.*;

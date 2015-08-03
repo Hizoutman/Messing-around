@@ -1,3 +1,4 @@
+package Mechanics;
 import CharacterClasses.Character;
 import java.util.Scanner;
 

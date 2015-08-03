@@ -1,5 +1,7 @@
+package Simulator;
 
 import CharacterClasses.Character;
+import Mechanics.Dice;
 
 public class ItemScenario {
 

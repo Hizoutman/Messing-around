@@ -1,4 +1,5 @@
 
+import Simulator.Events;
 import CharacterClasses.Character;
 
 public class Gameboard{

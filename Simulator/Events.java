@@ -1,6 +1,8 @@
+package Simulator;
 import CharacterClasses.Character;
-import CharacterClasses.Item;
-import CharacterClasses.EnemyGen;
+import Items.Item;
+import Mechanics.Battle;
+import Mechanics.EnemyGen;
 
 public class Events {
     private String description;

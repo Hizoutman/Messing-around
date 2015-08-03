@@ -1,4 +1,6 @@
-package CharacterClasses;
+package Mechanics;
+
+import CharacterClasses.Character;
 
 public class EnemyGen extends Character {
 	
