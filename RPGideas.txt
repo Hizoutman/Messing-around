@@ -32,6 +32,6 @@ Main Classes
 7. Multiplayer group battles (instead of one character at a time)
 #Add ideas here
 
-added new stuff
+added new stuff, and even newer stuff!
 
 
