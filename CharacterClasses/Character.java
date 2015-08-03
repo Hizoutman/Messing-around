@@ -110,24 +110,28 @@ public class Character {
         System.out.println(this.getName() + " has Died");
     }
 
-    public void useItem(Item item) {
+    public void useItem(Item item, int itemPos) {
         if(item.getType() == "Heal") {
             this.health += item.getAmt();
+            this.itemList[itemPos] = null;
         }
         else if(item.getType() == "Hurt") {
             this.health -= item.getAmt();
+            this.itemList[itemPos] = null;
             if(this.health <= 0) {
                 this.die();
             }
         }
         else if(item.getType() == "Atk") {
             this.attack += item.getAmt();
+            this.itemList[itemPos] = null;
         }
         else { //Def//
             this.defense += item.getAmt();
+            this.itemList[itemPos] = null;
         }
     }
-
+    
     public void getItem(Item item) {
         for(int x = 0; x < this.itemList.length; x++) {
             if(this.numItems == 5) {
@@ -140,10 +144,12 @@ public class Character {
                          this.itemList[3].getName() + "\n 5. " +
                          this.itemList[4].getName());
                     Scanner two = new Scanner(System.in);
-                    while(two.nextInt() < 1 || two.nextInt() > 5) {
+                    int replace = two.nextInt();
+                    while(replace < 1 || replace > 5) {
                         System.out.println("Not a valid Number! Please select a number from 1 to 5");
-                        two.nextInt();
+                        replace = two.nextInt();
                     }
+                    this.itemList[replace] = item;
                 }
                 break;
             }

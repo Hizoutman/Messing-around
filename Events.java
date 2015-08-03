@@ -11,7 +11,7 @@ public class Events {
 
     public Events(String description) {
         this.description = description;
-        
+
     }
 
     public Events(String description,Character player) {
@@ -24,16 +24,19 @@ public class Events {
 	   		Battle encounter = new Battle(player,monster);// write better
     	}
     	if(description.equals("HP")){
-    		System.out.println(player.getName() +" found an apple!\n" +player.getName() +" ate the apple.\nRecovered 50 hp.");
-    		player.setHealth(player.getHealth() + 50);
+    		System.out.println(player.getName() +" found an apple!");
+            Item apple = new Item("Apple" , "Heal" , 50);
+    		player.getItem(apple);
     	}
     	if(description.equals("DefChange")){
-    		System.out.println(player.getName() +" found some Def. steriods!\n" +player.getName() +" consumed the steriods\nDefense rose by 5.");
-    		player.setbDefense(player.getbDefense() + 5);
+    		System.out.println(player.getName() +" found some Def. steriods!");
+    		Item steroids = new Item("D Steroids" , "Def" , 5);
+            player.getItem(steroids);
     	}
     	if(description.equals("AttChange")){
-    		System.out.println(player.getName() +" found some Att. steriods!\n" +player.getName() +" consumed the steriods\nAttack rose by 5.");
-    		player.setbAttack(player.getbAttack() + 5);
+    		System.out.println(player.getName() +" found some Att. steriods!");
+    		Item atkSteroids = new Item("A Steroids" , "Atk" , 5);
+            player.getItem(atkSteroids);
     	}
     }
 
@@ -48,7 +51,7 @@ public class Events {
     /*
     public Event generateEvent() {
         //Event generator
-        
+
     }
     */
 }
