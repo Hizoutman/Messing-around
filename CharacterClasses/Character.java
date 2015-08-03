@@ -139,7 +139,7 @@ public class Character {
           Scanner one = new Scanner(System.in);
           String ans = one.nextLine();
           if(ans.equals("y")) {
-             System.out.println("1. " + this.itemList[0].getName() +
+             System.out.println(" 1. " + this.itemList[0].getName() +
                         "\n 2. " + this.itemList[1].getName() + "\n 3. " +
                          this.itemList[2].getName() + "\n 4. " +
                          this.itemList[3].getName() + "\n 5. " +
@@ -156,7 +156,7 @@ public class Character {
       }
        else{
     	   itemList[avalSlot] = item;
-    	   
+
        }
        System.out.println(this.getName() + " picked up a/an " +
                item.getName());
@@ -165,7 +165,7 @@ public class Character {
 	private int isFull() {
 		//to check if garbage is full
 		//for(Item anItem : itemList){
-		for(int i = 0; i<itemList.length;i++){
+		for(int i = 0; i<itemList.length;i++) {
 			if(itemList[i] == null){
 			// or if it is empty
 				return i;
