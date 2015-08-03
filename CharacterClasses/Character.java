@@ -140,10 +140,12 @@ public class Character {
                          this.itemList[3].getName() + "\n 5. " +
                          this.itemList[4].getName());
                     Scanner two = new Scanner(System.in);
-                    while(two.nextInt() < 1 || two.nextInt() > 5) {
+                    int replace = two.nextInt();
+                    while(replace < 1 || replace > 5) {
                         System.out.println("Not a valid Number! Please select a number from 1 to 5");
-                        two.nextInt();
+                        replace = two.nextInt();
                     }
+                    this.itemList[replace] = item;
                 }
                 break;
             }
