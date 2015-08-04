@@ -33,5 +33,27 @@ Main Classes
 #Add ideas here
 
 added new stuff, and even newer stuff!
+-----------------------------------------------
+Character classes
 
+------------
+Base Classes
+------------
+1)Cleric
+2)Warrior
+3)Mage
+4)Thief
+----------
+Promotions
+----------
+Cleric  - Priest (Heavy in healing)
+	- Paladin (Tank/High Hp/def)
 
+Warrior - Knight (Single target focus)
+	- Bezerker(AOE damage)
+Mage	- Elementalist (Specializes in certain elemental stat)
+	- Summoner (summon minons to assist) ---  -- Dragon Tamer
+		      				\
+		       				  -- Necromancer
+Thief	- Ninja
+	- Archer
