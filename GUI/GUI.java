@@ -32,16 +32,18 @@ import javafx.geometry.Pos;
 import javafx.scene.effect.DropShadow;
 import java.util.EventListener;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.StageStyle;
 import javafx.event.*;
 
 public class GUI extends Application {
     @Override public void start(Stage stage)throws Exception{
          StackPane backgroundSettings = new StackPane();
-        // load the image
+         // load the image
          Image image = new Image("back2.jpg");
          Image title = new Image("mordekaiser2.png");
          //A button with the specified text caption.
          Button play = new Button("Play");
+         Button options = new Button("Options");
          DropShadow shadow = new DropShadow();
          //Adding the shadow when the mouse cursor is on
          play.addEventHandler(MouseEvent.MOUSE_ENTERED,
@@ -58,6 +60,22 @@ public class GUI extends Application {
         }
         });
         play.setStyle("-fx-font: 22 arial; -fx-base:   #b6e7c9;");
+
+        //Adding the shadow when the mouse cursor is on
+        options.addEventHandler(MouseEvent.MOUSE_ENTERED,
+        new EventHandler<MouseEvent>() {
+        @Override public void handle(MouseEvent e) {
+           options.setEffect(shadow);
+       }
+       });
+       //Removing the shadow when the mouse cursor is off
+       options.addEventHandler(MouseEvent.MOUSE_EXITED,
+       new EventHandler<MouseEvent>() {
+       @Override public void handle(MouseEvent e) {
+           options.setEffect(null);
+       }
+       });
+       options.setStyle("-fx-font: 22 arial; -fx-base:   #b6e7c9;");
          // simple displays ImageView the image as is
          ImageView iv1 = new ImageView();
          iv1.setImage(image);
@@ -66,10 +84,15 @@ public class GUI extends Application {
          iv1.fitWidthProperty().bind(stage.widthProperty());
          iv2.fitWidthProperty().bind(stage.widthProperty());
          StackPane.setAlignment(iv2,Pos.TOP_CENTER);
-         backgroundSettings.getChildren().addAll(iv1,iv2);
+         StackPane.setAlignment(play,Pos.CENTER);
+         StackPane.setAlignment(options,Pos.BOTTOM_CENTER);
+         backgroundSettings.getChildren().addAll(iv1,iv2,play,options);
          Scene scene = new Scene(backgroundSettings);
+         stage.initStyle(StageStyle.DECORATED);
          stage.setTitle("Game");
          stage.setScene(scene);
+         stage.setWidth(500);
+         stage.setHeight(800);
          stage.sizeToScene();
          stage.show();
      }
