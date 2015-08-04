@@ -1,3 +1,4 @@
+package GUI;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,7 +38,7 @@ import javafx.event.*;
 public class GUI extends Application {
     @Override public void start(Stage stage)throws Exception{
          StackPane backgroundSettings = new StackPane();
-        // load the image
+         // load the image
          Image image = new Image("back2.jpg");
          Image title = new Image("mordekaiser2.png");
          //A button with the specified text caption.
