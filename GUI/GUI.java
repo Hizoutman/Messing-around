@@ -34,6 +34,7 @@ import java.util.EventListener;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.StageStyle;
 import javafx.event.*;
+//CHANGES HAVE BEEN MADE
 
 public class GUI extends Application {
     @Override public void start(Stage stage)throws Exception{
