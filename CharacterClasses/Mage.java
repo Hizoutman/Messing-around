@@ -2,8 +2,8 @@ package CharacterClasses;
 public class Mage extends Character{
   private String special;
   
-    public Mage(String name, int health,int attack,int defense){
-    super(name,health,attack,defense);
+    public Mage(String name, int health,int attack,int defense,int agility,int luck){
+    super(name,health,attack,defense,agility,luck);
     this.special = "Incantation";
     }
     public String getSpecial(){

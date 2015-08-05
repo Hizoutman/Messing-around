@@ -9,8 +9,8 @@ public class chpt1 {
 	public chpt1(Character p1, Events e){
 		
 		Battle encounter = new Battle();
-		Character e1 = new Character("grunt",15,5,3);
-		Character b = new Character("big boss",100,9,9);
+		Character e1 = new Character("grunt",15,5,3,5,5);
+		Character b = new Character("big boss",100,9,9,7,3);
 		
 		System.out.println("You will confront 3 enemies and then a boss");
 		

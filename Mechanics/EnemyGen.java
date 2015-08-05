@@ -13,10 +13,10 @@ public class EnemyGen extends Character {
 		int chosenInd = randomGen();
 		
 		if(chosenInd == (ClassNames.length - 1)) {
-			a = new Character(ClassNames[chosenInd], 255, 255, 0);
+			a = new Character(ClassNames[chosenInd], 255, 255, 0, 10, 25);
 		}
 		else{
-			a = new Character(ClassNames[chosenInd], 0,0,0);//make a stat changer
+			a = new Character(ClassNames[chosenInd], 0,0,0,0,0);//make a stat changer
 		}
 		return a;
 	}

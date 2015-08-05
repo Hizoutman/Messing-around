@@ -3,8 +3,8 @@ public class MagicalGirl extends Character {
 
         private String special;
 
-        public MagicalGirl(String name,int health, int attack,int defense) {
-            super(name,health,attack,defense);
+        public MagicalGirl(String name,int health, int attack,int defense,int agility,int luck) {
+            super(name,health,attack,defense,agility,luck);
             this.special = "Love Reigns Forever!";
         }
 

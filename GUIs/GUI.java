@@ -1,8 +1,7 @@
-package GUI;
+package GUIs;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -14,12 +13,9 @@ import javafx.scene.control.Label;
 import javafx.application.Application;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
@@ -28,7 +24,6 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.geometry.Pos;
 import javafx.scene.effect.DropShadow;
 import java.util.EventListener;
@@ -41,8 +36,10 @@ public class GUI extends Application {
     @Override public void start(Stage stage)throws Exception{
          StackPane backgroundSettings = new StackPane();
          // load the image
-         Image image = new Image("back2.jpg");
-         Image title = new Image("mordekaiser2.png");
+         Image image = new Image("GUIs/back2.jpg");
+        		 //"http://s30.postimg.org/6gouaqugh/back2.jpg"
+         Image title = new Image("GUIs/mordekaiser2.png");
+         		//"http://s22.postimg.org/xlpt7yskx/mordekaiser2.png"
          //A button with the specified text caption.
          Button play = new Button("Play");
          Button options = new Button("Options");
