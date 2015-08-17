@@ -44,8 +44,8 @@ public class GUI extends Application {
         StackPane backgroundSettings = new StackPane();
 
         // load the image
-        Image image = new Image("back2.jpg");
-        Image title = new Image("mordekaiser2.png");
+        Image image = new Image("GUIs/back2.jpg");
+        Image title = new Image("GUIs/mordekaiser2.png");
 
         //A button with the specified text caption.
         Button play = new Button("Play");

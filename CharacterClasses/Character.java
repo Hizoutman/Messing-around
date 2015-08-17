@@ -135,20 +135,38 @@ public class Character {
         	if (dmg < 0){
         		dmg = 0;
         	}
-	        System.out.println(this.name + " damages " + enemy.getName() + " for " + dmg);
-	        if(dmg > 0) {
-	            enemy.setHealth(enemy.getHealth() - dmg);
-	            int res = enemy.getHealth();
-	            if(res <= 0) {
-	                enemy.die();
-	            }
-	        }
+        	if(willCrit(this.luck)==true){
+		        System.out.println(this.name + " dealt a critical hit! " + enemy.getName() + " is hit for " + dmg*2);
+		        if(dmg+2 > 0) {
+		            enemy.setHealth(enemy.getHealth() - dmg*2);
+		            int res = enemy.getHealth();
+		            if(res <= 0) {
+		                enemy.die();
+		            }
+		        }
+        	} else{
+        		System.out.println(this.name + " damages " + enemy.getName() + " for " + dmg);
+		        if(dmg > 0) {
+		            enemy.setHealth(enemy.getHealth() - dmg);
+		            int res = enemy.getHealth();
+		            if(res <= 0) {
+		                enemy.die();
+		            }
+		        }
+        	}
         } else System.out.println(enemy.getName() + " dodged the attack.");
     }
     
     public boolean willDodge(int eAgi) {
     	Dice die = new Dice();
     	if((this.agility + die.roll()) - (eAgi + die.roll() - Math.ceil(this.luck/10)) > die.roll2() + eAgi)  {
+    		return true;
+    	}else return false;
+    }
+    
+    public boolean willCrit(int luck) {
+    	Dice die = new Dice();
+    	if(false){//create a random gen based on base luck /255. This equals to percent chance of a crit
     		return true;
     	}else return false;
     }
